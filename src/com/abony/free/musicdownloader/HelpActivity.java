@@ -1,4 +1,4 @@
-package com.rafsun.free.musicdownloader;
+package com.abony.free.musicdownloader;
 
 import android.content.Context;
 import android.content.Intent;
@@ -69,8 +69,8 @@ public class HelpActivity extends ActionBarActivity implements
 		}
 
 	}
-	
-	
+
+
 	@Override
 	protected void onPause() {
 		// TODO Auto-generated method stub

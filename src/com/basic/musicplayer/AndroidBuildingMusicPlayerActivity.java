@@ -25,7 +25,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.rafsun.free.musicdownloader.R;
+import com.abony.free.musicdownloader.R;
 
 public class AndroidBuildingMusicPlayerActivity extends Fragment implements
 		OnCompletionListener, SeekBar.OnSeekBarChangeListener {
@@ -97,7 +97,7 @@ public class AndroidBuildingMusicPlayerActivity extends Fragment implements
 
 		// Mediaplayer
 		mp = new MediaPlayer();
-		
+
 //		wifiLock = ((WifiManager) getSherlockActivity().getSystemService(Context.WIFI_SERVICE))
 //			    .createWifiLock(WifiManager.WIFI_MODE_FULL, "rafsun_lock");
 //
@@ -112,7 +112,7 @@ public class AndroidBuildingMusicPlayerActivity extends Fragment implements
 
 		// Getting all songs list
 		if(songManager.getPlayList() != null){
-			
+
 		songsList = songManager.getPlayList();
 		Log.d("AndroidBIG","size in BIG "+songsList.size());
 
@@ -126,8 +126,8 @@ public class AndroidBuildingMusicPlayerActivity extends Fragment implements
 		 * Play button click event plays a song and changes button to pause
 		 * image pauses a song and changes button to play image
 		 * */
-		
-		
+
+
 	}
 
 	private void addAllListener() {
@@ -320,20 +320,20 @@ public class AndroidBuildingMusicPlayerActivity extends Fragment implements
 
 	/**
 	 * Function to play a song
-	 * 
+	 *
 	 * @param songIndex
 	 *            - index of song
 	 * */
 	public void playSong(int songIndex) {
 		// Play song
-		try {			
+		try {
 			//mHandler.removeCallbacks(mUpdateTimeTask);
-			
+
 			mp.reset();
-			
+
 			mp.setDataSource(songsList.get(songIndex).get("songPath"));
 			mp.prepare();
-			
+
 //			mp.setWakeMode(getSherlockActivity(), PowerManager.FULL_WAKE_LOCK);
 			mp.start();
 //			mp.setScreenOnWhilePlaying(true);
@@ -405,7 +405,7 @@ public class AndroidBuildingMusicPlayerActivity extends Fragment implements
 	};
 
 	/**
-	 * 
+	 *
 	 * */
 	@Override
 	public void onProgressChanged(SeekBar seekBar, int progress,
@@ -467,30 +467,30 @@ public class AndroidBuildingMusicPlayerActivity extends Fragment implements
 			}
 		}
 	}
-	
+
 //	@Override
 //	public void onStop() {
 //		// TODO Auto-generated method stub
 //		super.onStop();
 //		mp.reset();
 //	}
-	
-	
+
+
 
 	@Override
 	public void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
 		try {
-			
-		
+
+
 			//mp.reset();
 //			if(mp != null && mp.isPlaying()) mp.stop();
-			
-			
+
+
 			mp.release();
 //			wifiLock.release();
-			
+
 		} catch (Exception e) {
 			Log.d("On RELEASE", e.getMessage());
 		}
@@ -500,7 +500,7 @@ public class AndroidBuildingMusicPlayerActivity extends Fragment implements
 //		super.onDestroy();
 //		try {
 //			mHandler.removeCallbacks(mUpdateTimeTask);
-//		
+//
 //			//mp.reset();
 //			if(mp != null && mp.isPlaying()) mp.stop();
 //			mp.release();
@@ -513,13 +513,13 @@ public class AndroidBuildingMusicPlayerActivity extends Fragment implements
 		songManager  = new SongsManager();
 		songsList = songManager.getPlayList();
 		Log.d("AndroidBIG","size in BIG "+songsList.size());
-		
+
 		// By default play first song
 		playSong(0);
 		mp.pause();
 		btnPlay.setImageResource(R.drawable.btn_play);
-		
-		
+
+
 	}
 
 }

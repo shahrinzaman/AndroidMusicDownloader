@@ -1,4 +1,4 @@
-package com.rafsun.free.musicdownloader;
+package com.abony.free.musicdownloader;
 
 
 import android.app.AlertDialog;
@@ -11,21 +11,21 @@ import com.basic.musicplayer.AndroidBuildingMusicPlayerActivity;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
 public class LeftRightSlider extends BaseActivity {
-	
-	
-	
+
+
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		//setSupportProgressBarIndeterminateVisibility(false);
 		getSlidingMenu().setMode(SlidingMenu.LEFT_RIGHT);
 		getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
-		
+
 		setContentView(R.layout.content_frame);
-		
+
 //		FrameLayout fl = (FrameLayout) findViewById(android.R.id.custom);
 //		 fl.addView(findViewById(R.layout.dialoglayout));
-		 
+
 		 AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getApplicationContext());
 		 //dialogBuilder.setView(findViewById(R.layout.dialoglayout));
 		 dialogBuilder.setTitle("Test dialog");
@@ -39,7 +39,7 @@ public class LeftRightSlider extends BaseActivity {
 
 		.replace(R.id.content_frame, new RootFragmentController("MainMENU" ,this,alertDialog,androidBuildingMusicPlayerActivity ))
 		.commit();
-		
+
 		getSlidingMenu().setSecondaryMenu(R.layout.menu_frame_two);
 		getSlidingMenu().setSecondaryShadowDrawable(R.drawable.shadowright);
 		getSupportFragmentManager()
@@ -47,9 +47,9 @@ public class LeftRightSlider extends BaseActivity {
 		.replace(R.id.menu_frame_two,androidBuildingMusicPlayerActivity )
 		.commit();
 	}
-	
-	
-	
+
+
+
 	@Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         menu.add("One");

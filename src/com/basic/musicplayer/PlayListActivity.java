@@ -14,7 +14,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-import com.rafsun.free.musicdownloader.R;
+import com.abony.free.musicdownloader.R;
 
 public class PlayListActivity extends ListActivity {
 	// Songs list
@@ -30,7 +30,7 @@ public class PlayListActivity extends ListActivity {
 		SongsManager plm = new SongsManager();
 		// get all songs from sdcard
 		if(plm.getPlayList()!=null){
-			
+
 		this.songsList = plm.getPlayList();
 
 		// looping through playlist
@@ -47,7 +47,7 @@ public class PlayListActivity extends ListActivity {
 		adapter = new SimpleAdapter(this, songsListData,
 				R.layout.playlist_item, new String[] { "songTitle" }, new int[] {
 						R.id.songTitle });
-		
+
 		setListAdapter(adapter);
 
 		// selecting single ListView item
@@ -59,7 +59,7 @@ public class PlayListActivity extends ListActivity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				// getting listitem index
-				
+
 				int songIndex = position;
 				Log.d("Platlistactivity","number of index possition "+songIndex);
 				Log.d("Platlistactivity",""+songIndex);
@@ -71,11 +71,11 @@ public class PlayListActivity extends ListActivity {
 				setResult(100, in);
 				// Closing PlayListView
 				finish();
-				
+
 			}
 		});
-		
-		
-		
+
+
+
 	}
 }
