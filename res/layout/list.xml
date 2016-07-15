@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/customshape"
+    android:orientation="vertical" >
+
+<!--     just to satisfy the slidermenu -->
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+<!--     Editext for Search -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:background="@android:color/transparent"
+         >
+
+        <EditText
+            android:id="@+id/inputSearch"
+            android:layout_width="fill_parent"
+            android:padding="10dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="20"
+            android:hint="Search Songs..."
+            android:textStyle="italic"
+            android:inputType="textVisiblePassword" />
+
+        <Button
+            android:id="@+id/inputButton"
+            android:text=""
+            android:background="@drawable/search"
+            android:textSize="15sp"
+            android:layout_weight="80"
+            android:padding="4dp"
+            android:layout_gravity="right"
+            
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!-- List View -->
+
+<!--         android:divider="#242424" -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="4dp"
+        android:background="@drawable/customshape"
+        android:divider="#3424"
+        android:listSelector="@drawable/list_selector" 
+        android:paddingLeft="@dimen/list_padding"
+        android:paddingRight="@dimen/list_padding"
+         />
+
+</LinearLayout>

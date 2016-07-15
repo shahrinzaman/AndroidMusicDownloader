@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Music Downloader</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+     <string name="viewpager">ViewPager</string>
+    <string name="attach">Attach</string>
+    <string name="title_bar">Title Bar Options</string>
+    <string name="title_bar_slide">Sliding Title Bar</string>
+    <string name="title_bar_content">Sliding Content Only</string>
+    <string name="animations">Custom Animations</string>
+    <string name="anim_zoom">Zoom</string>
+    <string name="anim_scale">Scale</string>
+    <string name="anim_fold">Fold</string>
+    <string name="anim_slide">Slide Up</string>
+    <string name="changing_fragments">Changing Fragments</string>
+    <string name="responsive_ui">Responsive UI</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="left_and_right">Left and Right</string>
+    <string name="github">GitHub</string>
+    <string name="github_label">SlidingMenu on GitHub</string>
+    <string name="what_is_this">What is this?</string>
+    <string name="status_text_default">Enter the URL of the file to download.</string>
+    <string name="progress_dialog_title_downloading">Downloading...</string>
+    <string name="progress_dialog_title_connecting">Connecting...</string>
+    <string name="progress_dialog_message_prefix_downloading">Downloading file</string>
+    <string name="progress_dialog_message_prefix_connecting">Connecting to</string>
+    <string name="user_message_download_complete">Download complete!</string>
+    <string name="user_message_download_canceled">Download canceled!</string>
+    <string name="error_message_bad_url">Error: Invalid URL!</string>
+    <string name="error_message_file_not_found">Error: File not found!</string>
+    <string name="error_message_general">Error downloading file!</string>
+
+</resources>

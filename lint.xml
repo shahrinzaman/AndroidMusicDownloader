@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ValidFragment" severity="ignore">
+        <ignore path="src/com/androidhive/musicplayer/AndroidBuildingMusicPlayerActivity.java" />
+        <ignore path="src/com/rafsun/free/musicdownloader/LeftMenuDownloadList.java" />
+        <ignore path="src/com/rafsun/free/musicdownloader/SampleListFragment.java" />
+    </issue>
+</lint>
